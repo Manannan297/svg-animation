@@ -1,0 +1,93 @@
+:root {
+  --transition: 0.17s ease-in-out;
+  --transition-long: 1s ease-in-out;
+}
+
+button {
+  background: none;
+  border: 0;
+  padding: 0;
+  cursor: pointer;
+}
+
+html {
+  box-sizing: border-box;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+.wrapper {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2.5rem;
+  width: 400px;
+  height: 400px;
+  margin: 0 auto;
+  padding: 5rem;
+
+  background-color: rgb(79, 113, 176);
+  border: 1px solid rgb(36, 108, 240);
+  border-radius: 10px;
+}
+
+.icon-wrapper {
+  display: grid;
+  place-items: center;
+  border: 2px dotted rgb(241, 118, 74);
+  border-radius: 5px;
+}
+
+svg {
+  color: rgb(241, 118, 74);
+}
+
+/* Стрелка */
+
+@keyframes arrow {
+  to {
+    transform: translateY(60px);
+    opacity: 0;
+  }
+}
+
+@keyframes arrow-2 {
+  to {
+    transform: translateY(0px);
+    opacity: 1;
+  }
+}
+
+.arrow-2 {
+  transform: translateY(-55px);
+  opacity: 0;
+}
+
+.arrow:hover .arrow-1 {
+  animation: arrow var(--transition-long) infinite;
+}
+
+.arrow:hover .arrow-2 {
+  animation: arrow-2 var(--transition-long) infinite;
+}
+
+/* Бургер */
+
+.burger path {
+  transform-origin: 50%;
+  transition: transform var(--transition), opacity var(--transition);
+}
+
+.burger:hover .top {
+  transform: translateY(16.75%) translateX(-16.9%) rotate(45deg);
+}
+
+.burger:hover .middle {
+  opacity: 0;
+  transform: rotate(135deg);
+}
+
+.burger:hover .bottom {
+  transform: translateY(16.75%) translateX(16.9%) rotate(135deg);
+}
