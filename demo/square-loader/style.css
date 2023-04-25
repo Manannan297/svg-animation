@@ -1,0 +1,46 @@
+html {
+  box-sizing: border-box;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+.wrapper {
+  display: grid;
+  place-items: center;
+  width: 400px;
+  height: 400px;
+  margin: 0 auto;
+  padding: 5rem;
+
+  background-color: rgb(79, 113, 176);
+  border: 1px solid rgb(36, 108, 240);
+  border-radius: 10px;
+}
+
+.spinner {
+  stroke: #ff7f50;
+  stroke-linecap: round;
+  stroke-width: 2px;
+  stroke-dasharray: 85px;
+}
+
+svg {
+  background: rgb(36, 108, 240);
+  box-shadow: 0 0 1rem rgba(0, 0, 0, 0.5);
+}
+
+.spinner {
+  stroke: #ff7f50;
+  stroke-linecap: round;
+  stroke-width: 3px;
+  stroke-dasharray: 85px;
+  animation: spin 2s linear infinite;
+}
+
+@keyframes spin {
+  to {
+    stroke-dashoffset: -340px;
+  }
+}
