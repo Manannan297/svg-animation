@@ -1,0 +1,67 @@
+html {
+  box-sizing: border-box;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+.wrapper {
+  display: grid;
+  place-items: center;
+  width: 400px;
+  height: 400px;
+  margin: 0 auto;
+  padding: 2rem;
+
+  background-color: rgb(255, 255, 255);
+  border-radius: 10px;
+  box-shadow: 0 0 1rem rgba(0, 0, 0, 0.5);
+}
+
+.bar {
+  stroke: #f00f00;
+  stroke-width: 2px;
+  animation: loader 4s cubic-bezier(0.65, 0.815, 0.735, 0.395) infinite;
+  stroke-dashoffset: 0px;
+}
+
+@keyframes loader {
+  0% {
+    stroke-dasharray: 25px 225px;
+    stroke-dashoffset: -110px;
+  }
+
+  12.5% {
+    stroke-dasharray: 55px 195px;
+  }
+
+  25% {
+    stroke-dasharray: 100px 150px;
+  }
+
+  37.5% {
+    stroke-dasharray: 140px 110px;
+  }
+
+  50% {
+    stroke-dasharray: 150px 100px;
+  }
+
+  67.5% {
+    stroke-dasharray: 180px 70px;
+  }
+
+  75% {
+    stroke-dasharray: 250px 0px;
+  }
+
+  87.5% {
+    stroke-dasharray: 225px 25px;
+  }
+
+  100% {
+    stroke-dasharray: 25px 225px;
+    stroke-dashoffset: -850px;
+  }
+}
