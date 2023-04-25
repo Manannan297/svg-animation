@@ -1,0 +1,72 @@
+:root {
+  --chocolate: #b27214;
+  --chocolate-item: #995c0d;
+  --package-inner: #2ba5f7;
+  --package-outer: #2197d8;
+  --light: #ffffff;
+  --stroke-color: #333333;
+}
+
+.white-chocolate {
+  --chocolate: #e1d6b5;
+  --chocolate-item: #e0ce9b;
+  --package-inner: rgb(51, 151, 44);
+  --package-outer: rgb(32, 141, 24);
+  --light: #ffffff;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+}
+
+.wrapper {
+  display: grid;
+  place-items: center;
+  width: 90vw;
+  min-height: 90vh;
+  margin: 24px auto;
+  padding: 50px;
+  background-color: rgb(204, 68, 95);
+  border: 2px solid rgb(159, 26, 53);
+  border-radius: 10px;
+}
+
+.chocolate {
+  color: var(--chocolate);
+  stroke: var(--stroke-color);
+  stroke-width: 10px;
+  stroke-linejoin: round;
+}
+
+.chocolate-item {
+  color: var(--chocolate-item);
+  stroke: var(--stroke-color);
+  stroke-width: 10px;
+  stroke-linejoin: round;
+}
+
+.package-inner {
+  color: var(--package-inner);
+  stroke: var(--stroke-color);
+  stroke-width: 10px;
+  stroke-linejoin: round;
+}
+
+.package-outer {
+  color: var(--package-outer);
+  stroke: var(--stroke-color);
+  stroke-width: 10px;
+  stroke-linejoin: round;
+}
+
+.light {
+  color: var(--light);
+}
