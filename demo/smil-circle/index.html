@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Последовательная анимация SMIL</title>
+  </head>
+  <body>
+    <div class="wrapper">
+      <svg id="svg" width="200" height="200" viewBox="0 0 120 120">
+        <circle
+          cx="60"
+          cy="60"
+          r="50"
+          fill="none"
+          stroke="#EB5933"
+          stroke-width="10"
+        />
+        <circle
+          id="circle"
+          cx="60"
+          cy="60"
+          r="50"
+          transform="rotate(-90 60 60)"
+          fill="none"
+          stroke-dashoffset="314"
+          stroke-dasharray="314"
+          stroke="#302683"
+          stroke-width="10"
+        ></circle>
+        <animate
+          href="#circle"
+          begin="svg.click"
+          attributeName="stroke-dashoffset"
+          dur="1s"
+          begin="svg.click"
+          from="314"
+          to="0"
+          fill="freeze"
+          id="animation"
+        />
+        <text
+          id="text"
+          x="50%"
+          y="50%"
+          fill="#717171"
+          text-anchor="middle"
+          dy="7"
+          font-size="20"
+          opacity="0"
+        >
+          Готово
+        </text>
+        <animate
+          href="#text"
+          attributeName="opacity"
+          dur="0.3s"
+          fill="freeze"
+          from="0"
+          to="1"
+          begin="animation.end - 0.5s"
+        />
+      </svg>
+    </div>
+  </body>
+</html>
