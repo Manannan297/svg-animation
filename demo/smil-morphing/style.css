@@ -1,0 +1,11 @@
+svg {
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  background-color: transparent;
+  box-shadow: rgba(180, 54, 202, 0.2) 0px 8px 24px;
+  padding: 25px;
+  border: 0;
+  margin-top: 50px;
+  margin-left: 50px;
+}
