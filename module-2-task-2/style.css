@@ -1,0 +1,70 @@
+:root {
+  --gold: #deb887;
+}
+
+html,
+body {
+  background: #666666;
+  margin: 0;
+}
+
+.wrapper {
+  display: grid;
+  place-items: center;
+  width: 400px;
+  height: 300px;
+  margin: 0 auto;
+  margin-top: 5rem;
+}
+
+.button {
+  padding: 0 15px;
+  min-width: 255px;
+  height: 55px;
+  border: 0;
+  background: transparent;
+  color: #ffffff;
+  font-size: 24px;
+  letter-spacing: 0.125em;
+  cursor: pointer;
+  position: relative;
+  transition: color 0.5s ease-in-out;
+}
+
+.button > svg {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+
+.button-shape {
+  width: 100%;
+  height: 100%;
+  fill: none;
+  stroke: var(--gold);
+  stroke-width: 6px;
+  stroke-linecap: round;
+  stroke-dasharray: 120 500;
+  stroke-dashoffset: -404;
+}
+
+@keyframes stroke {
+  0% {
+    stroke-dasharray: 120 500;
+    stroke-dashoffset: -404;
+  }
+  100% {
+    stroke-dasharray: 760;
+    stroke-dashoffset: 0;
+  }
+}
+
+.button:hover {
+  color: var(--gold);
+}
+
+.button:hover .button-shape {
+  animation: 0.5s stroke linear forwards alternate;
+}
