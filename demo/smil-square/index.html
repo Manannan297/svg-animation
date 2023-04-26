@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Основные возможности SMIL</title>
+  </head>
+  <body>
+    <div class="wrapper">
+      <svg id="parent" width="120" height="120" viewBox="0 0 120 120">
+        <rect id="rectangle-animated" width="120" height="120" fill="#DF980D" />
+        <animate
+          href="#rectangle-animated"
+          attributeType="CSS"
+          attributeName="fill"
+          to="red"
+          fill="freeze"
+          dur="0.7s"
+          begin="parent.click"
+          repeatcount="indefinite"
+          repeatdur="00:05"
+        />
+      </svg>
+    </div>
+  </body>
+</html>
